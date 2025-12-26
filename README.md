@@ -36,4 +36,4 @@ Cela permet d'identifier immédiatement la **Frontière d'Efficience** (les acti
 pip install requests pandas matplotlib numpy
 
 
-`![Analyse Graphique](./aave_analysis.png)`
+![Analyse Graphique](./aave_analysis.png)
