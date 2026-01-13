@@ -2,9 +2,6 @@
 
 An interactive data visualization dashboard built with **Streamlit** to analyze and compare yield opportunities across various **Aave** deployments.
 
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![DefiLlama](https://img.shields.io/badge/Data-DefiLlama_API-blue?style=for-the-badge)
 
 ## 📊 Overview
 This tool fetches real-time data from the **DefiLlama Yields API** to help users visualize the relationship between **APY (Annual Percentage Yield)**, **TVL (Total Value Locked)**, and **Risk Scores**.
