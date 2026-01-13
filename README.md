@@ -1,40 +1,28 @@
-# DeFi Yield & Risk Optimizer (Aave Edition)
+# 🚀 Aave Yield & Risk Optimizer
 
-## Présentation du Projet
-Ce projet est un outil d'aide à la décision conçu pour les analystes DeFi et les investisseurs. Il permet d'extraire, de traiter et de visualiser en temps réel les opportunités de rendement (APY) sur le protocole **Aave**, tout en les pondérant par un **score de risque composite**.
+An interactive data visualization dashboard built with **Streamlit** to analyze and compare yield opportunities across various **Aave** deployments.
 
-L'objectif est de résoudre le problème de l'asymétrie d'information en DeFi : un APY élevé cache souvent un risque de liquidité ou de smart-contract important.
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![DefiLlama](https://img.shields.io/badge/Data-DefiLlama_API-blue?style=for-the-badge)
 
-## Stack Technique
-- **Langage** : Python 3.x
-- **Data Ingestion** : API DefiLlama (Endpoints `/pools`)
-- **Data Processing** : Pandas (Nettoyage, filtrage par regex, gestion des valeurs nulles)
-- **Data Visualization** : Matplotlib & Numpy
+## 📊 Overview
+This tool fetches real-time data from the **DefiLlama Yields API** to help users visualize the relationship between **APY (Annual Percentage Yield)**, **TVL (Total Value Locked)**, and **Risk Scores**.
 
-## Méthodologie : Le "Risk Score"
-Le projet ne se contente pas d'afficher les rendements bruts. Il calcule un indicateur de risque basé sur les données de prédiction Machine Learning fournies par l'API :
+The risk score is calculated based on DefiLlama's AI-driven confidence intervals (`predictedProbability`), allowing for a better assessment of "too good to be true" yields.
 
-$$Risk Score = 100 - Confidence_{IA}$$
+## ✨ Key Features
+* **Dynamic Filtering**: Filter by Blockchain (Ethereum, Polygon, Arbitrum, etc.) and specific Assets (USDC, WETH, GHO).
+* **Bubble Chart Visualization**: 
+    * **X-Axis**: APY (%)
+    * **Y-Axis**: Risk Score (Lower is safer)
+    * **Size**: Proportional to TVL.
+* **Automated Insights**: Highlights the top 5 largest pools for quick decision-making.
+* **Live Data**: Data is cached to ensure performance while staying up-to-date with DeFi markets.
 
-Où **Confidence_IA** représente la probabilité (`predictedProbability`) que le rendement soit stable ou à la hausse. 
-- **Score proche de 0** : Actif très stable, confiance maximale.
-- **Score proche de 100** : Actif volatil ou manque de données, risque maximal.
+## 🛠️ Installation & Local Usage
 
-## Visualisation : Bubble Chart Multi-Dimensionnel
-L'outil génère une analyse graphique en 4 dimensions :
-1. **Axe X** : Rendement (APY %)
-2. **Axe Y** : Score de Risque (Bas est mieux)
-3. **Taille des bulles** : Volume des fonds bloqués (TVL en USD)
-4. **Couleur** : Gradient de risque (Vert vers Rouge)
-
-Cela permet d'identifier immédiatement la **Frontière d'Efficience** (les actifs offrant le meilleur ratio rendement/risque).
-
-## Installation et Utilisation
-
-### Pré-requis
-```bash
-pip install requests pandas matplotlib numpy
-```
-
-
-![Analyse Graphique](./aave_analysis.png)
+1. **Clone the repository**:
+   ```bash
+   git clone [https://github.com/Colin503/DeFi-Yield-Risk-Optimizer.git](https://github.com/Colin503/DeFi-Yield-Risk-Optimizer.git)
+   cd DeFi-Yield-Risk-Optimizer
